@@ -20,9 +20,9 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO", "https://github.com/NotReallyShikhar/YukkiMusicBot"
+    "UPSTREAM_REPO", "https://github.com/Shailendra34/Hero-OP"
 )
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 
 if str(getenv("SUPPORT_CHANNEL")).strip() == "":
     SUPPORT_CHANNEL = None
