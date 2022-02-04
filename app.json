@@ -1,5 +1,5 @@
 {
-  "name": "Yukki Music Bot",
+  "name": "ʜᴇʀᴏ ᴍᴜsɪᴄs ʙᴏᴛ",
   "description": "ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ ʙᴏᴛ ᴡɪᴛʜ ᴘʀᴏᴘᴇʀ ғᴜɴᴄᴛɪᴏɴs ᴡʀɪᴛᴛᴇɴ ɪɴ ᴘʏᴛʜᴏɴ ᴡɪᴛʜ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴘʏ-ᴛɢᴄᴀʟʟs.",
   "logo": "https://te.legra.ph/file/a1dd253ae11053bfebaa3.png",
   "keywords": [
@@ -50,7 +50,7 @@
     },
     "OWNER_ID": {
       "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-      "value": "",
+      "value": "1323020756",
       "required": true
     },
     "STRING_SESSION1": {
@@ -95,7 +95,7 @@
     },
     "SUDO_USERS": {
       "description": "The user id(s) of user(s) whom you would like to add as a SUDO. Multiple values shall be seperated with a space.",
-      "value": "",
+      "value": "1323020756",
       "required": true
     },
     "LOG_SESSION": {
@@ -105,12 +105,12 @@
     },
     "UPSTREAM_REPO": {
       "description": "If you dont know this, Leave as it is",
-      "value": "https://github.com/NotReallyShikhar/YukkiMusicBot",
+      "value": "https://github.com/Shailendra34/Hero-OP",
       "required": true
     },
     "UPSTREAM_BRANCH": {
       "description": "Repo's Branch Name",
-      "value": "master",
+      "value": "main",
       "required": true
     }
   },
