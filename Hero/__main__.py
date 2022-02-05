@@ -17,7 +17,7 @@ from Hero import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
                    ASSNAME3, ASSNAME4, ASSNAME5, BOT_ID, BOT_NAME, LOG_CLIENT,
                    OWNER_ID, app)
 from Hero.Core.Clients.cli import LOG_CLIENT
-from Hero.Core.PyTgCalls.Yukki import (pytgcalls1, pytgcalls2, pytgcalls3,
+from Hero.Core.PyTgCalls.Hero import (pytgcalls1, pytgcalls2, pytgcalls3,
                                         pytgcalls4, pytgcalls5)
 from Hero.Database import (get_active_chats, get_active_video_chats,
                             get_sudoers, is_on_off, remove_active_chat,
