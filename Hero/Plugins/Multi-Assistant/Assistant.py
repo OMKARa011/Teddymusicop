@@ -60,7 +60,7 @@ async def awaiting_message(client, message):
 
 
 @Client.on_message(
-    commandpro([".a", "approve", ".ap"])
+    commandpro(["/approve", ".a", "approve", ".ap"])
     & filters.user(SUDOERS)
     & ~filters.user("me")
     & ~filters.me
@@ -79,7 +79,7 @@ async def pm_approve(client, message):
 
 
 @Client.on_message(
-    commandpro([".d", ".dis", ".da", "disapprove"])
+    commandpro(["/disapprove", ".d", ".dis", ".da", "disapprove"])
     & filters.user(SUDOERS)
     & ~filters.user("me")
     & ~filters.me
@@ -105,7 +105,7 @@ async def pm_disapprove(client, message):
 
 
 @Client.on_message(
-    commandpro([".b", "block"])
+    commandpro(["/block", ".b", "block"])
     & filters.user(SUDOERS)
     & ~filters.user("me")
     & ~filters.me
@@ -120,7 +120,7 @@ async def block_user_func(client, message):
 
 
 @Client.on_message(
-    commandpro(".ub", ".un", "unblock")
+    commandpro(["/unblock", ".ub", ".un", "unblock"])
     & filters.user(SUDOERS)
     & ~filters.user("me")
     & ~filters.me
@@ -137,7 +137,7 @@ async def unblock_user_func(client, message):
 
 
 @Client.on_message(
-    commandpro([".pfp", "pfp"])
+    commandpro(["/pfp", ".pfp", "pfp"])
     & filters.user(SUDOERS)
     & ~filters.user("me")
     & ~filters.me
@@ -155,7 +155,7 @@ async def set_pfp(client, message):
 
 
 @Client.on_message(
-    commandpro([".bio", "bio"])
+    commandpro(["/bio", ".bio", "bio"])
     & filters.user(SUDOERS)
     & ~filters.user("me")
     & ~filters.me
