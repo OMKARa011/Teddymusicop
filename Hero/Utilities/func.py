@@ -23,7 +23,6 @@ from Hero.Database import (get_active_video_chats, get_video_limit,
 from Hero.Decorators.assistant import AssistantAdd
 from Hero.Decorators.checker import checker
 from Hero.Decorators.logger import logging
-from Hero.Decorators.permission import PermissionCheck
 from Hero.Inline import (livestream_markup, playlist_markup, search_markup,
                           search_markup2, url_markup, url_markup2)
 from Hero.Utilities.changers import seconds_to_min, time_to_seconds
