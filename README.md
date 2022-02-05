@@ -55,7 +55,7 @@
 </details>
 
 
-# ᴏʀɪɢɪɴᴀʟ ʀᴇᴘᴏ & sᴘᴇᴄɪᴀʟ ᴄʀᴇᴅɪᴛ
+## ᴏʀɪɢɪɴᴀʟ ʀᴇᴘᴏ & sᴘᴇᴄɪᴀʟ ᴄʀᴇᴅɪᴛ
 
 [sʜɪᴋʜᴀʀ](https://github.com/notreallyshikhar/YukkiMusicBot) 
 
