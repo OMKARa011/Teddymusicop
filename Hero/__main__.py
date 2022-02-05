@@ -60,7 +60,7 @@ async def initiate_bot():
         )
         for all_module in ALL_MODULES:
             imported_module = importlib.import_module(
-                "Yukki.Plugins." + all_module
+                "Hero.Plugins." + all_module
             )
             if (
                 hasattr(imported_module, "__MODULE__")
