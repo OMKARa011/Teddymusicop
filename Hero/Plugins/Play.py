@@ -44,7 +44,7 @@ async def mplayaa(_, message: Message):
         db_mem[message.chat.id] = {}
     if message.sender_chat:
         return await message.reply_text(
-            "You're an __Anonymous Admin__ in this Chat Group!\nRevert back to User Account From Admin Rights."
+            "ʏᴏᴜ'ʀᴇ ᴀɴ __ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ__ ɪɴ ᴛʜɪs ᴄʜᴀᴛ ɢʀᴏᴜᴘ....\nʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs...."
         )
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
@@ -59,7 +59,7 @@ async def mplayaa(_, message: Message):
     url = get_url(message)
     if audio:
         mystic = await message.reply_text(
-            "🔄 Processing Audio... Please Wait!"
+            "🔄 ᴘʀᴏᴄᴇssɪɴɢ ᴀᴜᴅɪᴏ...."
         )
         try:
             read = db_mem[message.chat.id]["live_check"]
@@ -73,13 +73,13 @@ async def mplayaa(_, message: Message):
             pass
         if audio.file_size > 1073741824:
             return await mystic.edit_text(
-                "Audio File Size Should Be Less Than 150 mb"
+                "ᴀᴜᴅɪᴏ ғɪʟᴇ sɪᴢᴇ sʜᴏᴜʟᴅ ʙᴇ ʟᴇss ᴛʜᴀɴ 𝟷𝟻𝟶 ᴍʙ"
             )
         duration_min = seconds_to_min(audio.duration)
         duration_sec = audio.duration
         if (audio.duration) > DURATION_LIMIT:
             return await mystic.edit_text(
-                f"**Duration Limit Exceeded**\n\n**Allowed Duration: **{DURATION_LIMIT_MIN} minute(s)\n**Received Duration:** {duration_min} minute(s)"
+                f"**ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅᴇᴅ**\n\n**ᴀʟʟᴏᴡᴇᴅ ᴅᴜʀᴀᴛɪᴏɴ: **{DURATION_LIMIT_MIN} ᴍɪɴᴜᴛᴇs\n**ʀᴇᴄᴇɪᴠᴇᴅ ᴅᴜʀᴀᴛɪᴏɴ:** {duration_min} minute(s)"
             )
         file_name = (
             audio.file_unique_id
@@ -106,9 +106,9 @@ async def mplayaa(_, message: Message):
             mystic,
         )
     elif video:
-        return await message.reply_text("Use /play or /vplay commands to play video files in voice chat.")
+        return await message.reply_text("ᴜsᴇ `/play` ᴏʀ `/vplay` ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴘʟᴀʏ ᴀᴜᴅɪᴏ ᴏʀ ᴠɪᴅᴇᴏ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...")
     elif url:
-        mystic = await message.reply_text("🔄 Processing URL... Please Wait!")
+        mystic = await message.reply_text("🔄 ᴘʀᴏᴄᴇssɪɴɢ ᴜʀʟ....")
         if not message.reply_to_message:
             query = message.text.split(None, 1)[1]
         else:
@@ -131,12 +131,12 @@ async def mplayaa(_, message: Message):
             await message.reply_photo(
                 photo="Utils/Playlist.jpg",
                 caption=(
-                    "**Usage:** /play [Music Name or Youtube Link or Reply to Audio]\n\nIf you want to play Playlists! Select the one from Below."
+                    "**ᴜsᴀɢᴇ:** `/play` [ᴍᴜsɪᴄ ɴᴀᴍᴇ ᴏʀ ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀᴜᴅɪᴏ ғɪʟᴇ]\n\nɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ᴘʟᴀʏʟɪsᴛs sᴇʟᴇᴄᴛ ᴛʜᴇ ᴏɴᴇ ғʀᴏᴍ ʙᴇʟᴏᴡ..."
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
             return
-        mystic = await message.reply_text("🔍 **Searching**...")
+        mystic = await message.reply_text("**sᴇᴀʀᴄʜɪɴɢ...**")
         query = message.text.split(None, 1)[1]
         (
             title,
@@ -162,7 +162,7 @@ async def vplayaaa(_, message: Message):
         db_mem[message.chat.id] = {}
     if message.sender_chat:
         return await message.reply_text(
-            "You're an __Anonymous Admin__ in this Chat Group!\nRevert back to User Account From Admin Rights."
+            "ʏᴏᴜ'ʀᴇ ᴀɴ __ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ__ ɪɴ ᴛʜɪs ᴄʜᴀᴛ ɢʀᴏᴜᴘ...\nʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs..."
         )
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
@@ -176,12 +176,12 @@ async def vplayaaa(_, message: Message):
     )
     url = get_url(message)
     if audio:
-        return await message.reply_text("Use /play or /mplay commands to play audio files in voice chat.")
+        return await message.reply_text("ᴜsᴇ `/play` ᴏʀ `/vplay` ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴘʟᴀʏ ᴀᴜᴅɪᴏ ᴏʀ ᴠɪᴅᴇᴏ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...")
     elif video:
         limit = await get_video_limit(141414)
         if not limit:
             return await message.reply_text(
-                "**No Limit Defined for Video Calls**\n\nSet a Limit for Number of Maximum Video Calls allowed on Bot by /set_video_limit [Sudo Users Only]"
+                "**ɴᴏ ʟɪᴍɪᴛ ᴅᴇғɪɴᴇᴅ ғᴏʀ ᴠɪᴅᴇᴏ ᴄᴀʟʟs**\n\nsᴇᴛ ᴀ ʟɪᴍɪᴛ ғᴏʀ ɴᴜᴍʙᴇʀ ᴏғ ᴍᴀxɪᴍᴜᴍ ᴠɪᴅᴇᴏ ᴄᴀʟʟs ᴀʟʟᴏᴡᴇᴅ ᴏɴ ʙᴏᴛ ʙʏ `/set_video_limit` [sᴜᴅᴏ ᴜsᴇʀs ᴏɴʟʏ]"
             )
         count = len(await get_active_video_chats())
         if int(count) == int(limit):
@@ -189,16 +189,16 @@ async def vplayaaa(_, message: Message):
                 pass
             else:
                 return await message.reply_text(
-                    "Sorry! Bot only allows limited number of video calls due to CPU overload issues. Many other chats are using video call right now. Try switching to audio or try again later"
+                    "sᴏʀʀʏ ʙᴏᴛ ᴏɴʟʏ ᴀʟʟᴏᴡs ʟɪᴍɪᴛᴇᴅ ɴᴜᴍʙᴇʀ ᴏғ ᴠɪᴅᴇᴏ ᴄᴀʟʟs ᴅᴜᴇ ᴛᴏ ᴄᴘᴜ ᴏᴠᴇʀʟᴏᴀᴅ ɪssᴜᴇs. ᴍᴀɴʏ ᴏᴛʜᴇʀ ᴄʜᴀᴛs ᴀʀᴇ ᴜsɪɴɢ ᴠɪᴅᴇᴏ ᴄᴀʟʟ ʀɪɢʜᴛ ɴᴏᴡ. ᴛʀʏ sᴡɪᴛᴄʜɪɴɢ ᴛᴏ ᴀᴜᴅɪᴏ ᴏʀ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ..."
                 )
         mystic = await message.reply_text(
-            "🔄 Processing Video... Please Wait!"
+            "🔄 ᴘʀᴏᴄᴇssɪɴɢ ᴠɪᴅᴇᴏ..."
         )
         try:
             read = db_mem[message.chat.id]["live_check"]
             if read:
                 return await mystic.edit(
-                    "Live Streaming Playing...Stop it to play music"
+                    "ʟɪᴠᴇs sᴛʀᴇᴀᴍɪɴɢ.../nsᴛᴏᴘ ɪᴛ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ..."
                 )
             else:
                 pass
@@ -212,7 +212,7 @@ async def vplayaaa(_, message: Message):
             mystic,
         )
     elif url:
-        mystic = await message.reply_text("🔄 Processing URL... Please Wait!")
+        mystic = await message.reply_text("🔄 ᴘʀᴏᴄᴇssɪɴɢ ᴜʀʟ...")
         if not message.reply_to_message:
             query = message.text.split(None, 1)[1]
         else:
@@ -225,7 +225,7 @@ async def vplayaaa(_, message: Message):
             videoid,
         ) = get_yt_info_query(query)               
         
-        VideoData = f"Choose {videoid}|{duration_min}|{message.from_user.id}"
+        VideoData = f"ᴄʜᴏᴏsᴇ {videoid}|{duration_min}|{message.from_user.id}"
         return await vplay_stream(message,VideoData,mystic)
     else:        
         if len(message.command) < 2:
@@ -235,12 +235,12 @@ async def vplayaaa(_, message: Message):
             await message.reply_photo(
                 photo="Utils/Playlist.jpg",
                 caption=(
-                    "**Usage:** /play [Music Name or Youtube Link or Reply to Audio]\n\nIf you want to play Playlists! Select the one from Below."
+                    "**ᴜsᴀɢᴇ:** `/vplay` [ᴍᴜsɪᴄ ɴᴀᴍᴇ ᴏʀ ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀᴜᴅɪᴏ]\n\nɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ᴘʟᴀʏʟɪsᴛs sᴇʟᴇᴄᴛ ᴛʜᴇ ᴏɴᴇ ғʀᴏᴍ ʙᴇʟᴏᴡ..."
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
             return
-        mystic = await message.reply_text("🔄 Processing... Please Wait!")
+        mystic = await message.reply_text("🔄 ᴘʀᴏᴄᴇssɪɴɢ...")
         query = message.text.split(None, 1)[1]
         (
             title,
@@ -249,5 +249,5 @@ async def vplayaaa(_, message: Message):
             thumb,
             videoid,
         ) = get_yt_info_query(query)       
-        VideoData = f"Choose {videoid}|{duration_min}|{message.from_user.id}"
+        VideoData = f"ᴄʜᴏᴏsᴇ {videoid}|{duration_min}|{message.from_user.id}"
         return await vplay_stream(message,VideoData,mystic)

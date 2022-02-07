@@ -32,34 +32,34 @@ from Hero.Utilities.youtube import get_m3u8, get_yt_info_id
 loop = asyncio.get_event_loop()
 
 
-__MODULE__ = "Voice Chat"
+__MODULE__ = "ᴠᴏɪᴄᴇ ᴄʜᴀᴛ"
 __HELP__ = """
 
 
 /pause
-- Pause the playing music on voice chat.
+- ᴘᴀᴜsᴇ ᴛʜᴇ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
 
 /resume
-- Resume the paused music on voice chat.
+- ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴘᴀᴜsᴇᴅ ᴍᴜsɪᴄ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
 
 /skip
-- Skip the current playing music on voice chat
+- sᴋɪᴘ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ
 
 /end or /stop
-- Stop the playout.
+- sᴛᴏᴘ ᴛʜᴇ ᴘʟᴀʏᴏᴜᴛ.
 
 /queue
-- Check queue list.
+- ᴄʜᴇᴄᴋ ǫᴜᴇᴜᴇ ʟɪsᴛ.
 
 
 **Note:**
-Only for Sudo Users
+ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs
 
 /activevc
-- Check active voice chats on bot.
+- ᴄʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴏɴ ʙᴏᴛ.
 
 /activevideo
-- Check active video calls on bot.
+- ᴄʜᴇᴄᴋ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏ ᴄᴀʟʟs ᴏɴ ʙᴏᴛ.
 """
 
 
@@ -72,25 +72,25 @@ Only for Sudo Users
 async def admins(_, message: Message):
     global get_queue
     if not len(message.command) == 1:
-        return await message.reply_text("Error! Wrong Usage of Command.")
+        return await message.reply_text("ᴇʀʀᴏʀ ᴡʀᴏɴɢ ᴜsᴀɢᴇ ᴏғ ᴄᴏᴍᴍᴀɴᴅ...")
     if not await is_active_chat(message.chat.id):
-        return await message.reply_text("Nothing is playing on voice chat.")
+        return await message.reply_text("ɴᴏᴛʜɪɴɢ ɪs ᴘʟᴀʏɪɴɢ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...")
     chat_id = message.chat.id
     if message.command[0][1] == "a":
         if not await is_music_playing(message.chat.id):
-            return await message.reply_text("Music is already Paused.")
+            return await message.reply_text("ᴍᴜsɪᴄ ɪs ᴀʟʀᴇᴀᴅʏ ᴘᴀᴜsᴇᴅ...")
         await music_off(chat_id)
         await pause_stream(chat_id)
         await message.reply_text(
-            f"🎧 Voicechat Paused by {message.from_user.mention}!"
+            f"🎧 ᴠᴏɪᴄᴇᴄʜᴀᴛ ᴘᴀᴜsᴇᴅ ʙʏ {message.from_user.mention}..."
         )
     if message.command[0][1] == "e":
         if await is_music_playing(message.chat.id):
-            return await message.reply_text("Music is already Playing.")
+            return await message.reply_text("🌸 ᴍᴜsɪᴄ ɪs ᴀʟʀᴇᴀᴅʏ ᴘʟᴀʏɪɴɢ...")
         await music_on(chat_id)
         await resume_stream(chat_id)
         await message.reply_text(
-            f"🎧 Voicechat Resumed by {message.from_user.mention}!"
+            f"🎧 ᴠᴏɪᴄᴇᴄʜᴀᴛ ʀᴇsᴜᴍᴇᴅ ʙʏ {message.from_user.mention}..."
         )
     if message.command[0][1] == "t" or message.command[0][1] == "n":
         if message.chat.id not in db_mem:
@@ -105,7 +105,7 @@ async def admins(_, message: Message):
         await remove_active_video_chat(chat_id)
         await stop_stream(chat_id)
         await message.reply_text(
-            f"🎧 Voicechat End/Stopped by {message.from_user.mention}!"
+            f"🎧 ᴠᴏɪᴄᴇᴄʜᴀᴛ ᴇɴᴅᴇᴅ/sᴛᴏᴘᴘᴇᴅ ʙʏ {message.from_user.mention}..."
         )
     if message.command[0][1] == "k":
         if message.chat.id not in db_mem:
@@ -117,7 +117,7 @@ async def admins(_, message: Message):
             await remove_active_chat(chat_id)
             await remove_active_video_chat(chat_id)
             await message.reply_text(
-                "No more music in __Queue__ \n\nLeaving Voice Chat"
+                "ɴᴏ ᴍᴏʀᴇ ᴍᴜsɪᴄ ɪɴ __ǫᴜᴇᴜᴇ__ \n\nʟᴇᴀᴠɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ..."
             )
             await stop_stream(chat_id)
             return
@@ -162,7 +162,7 @@ async def admins(_, message: Message):
                 final_output = await message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__</b> {title} \n⏳<b>__Duration:__</b> {duration_min} \n👤<b>__Requested by:__ </b> {mention}",
+                    caption=f"<b>__sᴋɪᴘᴘᴇᴅ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ__</b>\n\n🎥<b>__sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ:__</b> {title} \n⏳<b>__ᴅᴜʀᴀᴛɪᴏɴ:__</b> {duration_min} \n👤<b>__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__ </b> {mention}",
                 )
                 await start_timer(
                     videoid,
@@ -187,7 +187,7 @@ async def admins(_, message: Message):
                         await skip_video_stream(chat_id, videoid, 720, mystic)
                     except Exception as e:
                         return await mystic.edit(
-                            f"Error while changing video stream.\n\nPossible Reason:- {e}"
+                            f"ᴇʀʀᴏʀ ᴡʜɪʟᴇ ᴄʜᴀɴɢɪɴɢ ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍ...\n\nᴘᴏssɪʙʟᴇ ʀᴇᴀsᴏɴ:- {e}"
                         )
                     buttons = secondary_markup2("Smex1", message.from_user.id)
                     mention = db_mem[afk]["username"]
@@ -196,7 +196,7 @@ async def admins(_, message: Message):
                         photo="Utils/Telegram.JPEG",
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n👤**__Requested by:__** {mention}"
+                            f"<b>__sᴋɪᴘᴘᴇᴅ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ__</b>\n\n👤**__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__** {mention}"
                         ),
                     )
                     await mystic.delete()
@@ -210,7 +210,7 @@ async def admins(_, message: Message):
                     nrs, ytlink = await get_m3u8(videoid)
                     if nrs == 0:
                         return await mystic.edit(
-                            "Failed to fetch Video Formats.",
+                            "ғᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ ᴠɪᴅᴇᴏ ғᴏʀᴍᴀᴛs...",
                         )
                     try:
                         await skip_video_stream(
@@ -218,7 +218,7 @@ async def admins(_, message: Message):
                         )
                     except Exception as e:
                         return await mystic.edit(
-                            f"Error while changing video stream.\n\nPossible Reason:- {e}"
+                            f"ᴇʀʀᴏʀ ᴡʜɪʟᴇ ᴄʜᴀɴɢɪɴɢ ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍ...\n\nᴘᴏssɪʙʟᴇ ʀᴇᴀsᴏɴ:- {e}"
                         )
                     theme = await check_theme(chat_id)
                     c_title = message.chat.title
@@ -236,7 +236,7 @@ async def admins(_, message: Message):
                         photo=thumb,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n🎥<b>__Started Video Playing:__ </b> [{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n👤**__Requested by:__** {mention}"
+                            f"<b>__sᴋɪᴘᴘᴇᴅ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ__</b>\n\n🎥<b>__sᴛᴀʀᴛᴇᴅ ᴠɪᴅᴇᴏ ᴘʟᴀʏɪɴɢ:__ </b> [{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n👤**__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__** {mention}"
                         ),
                     )
                     await mystic.delete()
@@ -252,7 +252,7 @@ async def admins(_, message: Message):
                     )
             else:
                 mystic = await message.reply_text(
-                    f"**{MUSIC_BOT_NAME} Playlist Function**\n\n__Downloading Next Music From Playlist....__"
+                    f"**{MUSIC_BOT_NAME} ᴘʟᴀʏʟɪsᴛ ғᴜɴᴄᴛɪᴏɴ...**\n\n__ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴍᴜsɪᴄ ғʀᴏᴍ ᴘʟᴀʏʟɪsᴛ...__"
                 )
                 (
                     title,
@@ -261,7 +261,7 @@ async def admins(_, message: Message):
                     thumbnail,
                 ) = get_yt_info_id(videoid)
                 await mystic.edit(
-                    f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+                    f"**{MUSIC_BOT_NAME} ᴅᴏᴡɴʟᴏᴀᴅᴇʀ**\n**ᴛɪᴛʟᴇ:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
                 )
                 downloaded_file = await loop.run_in_executor(
                     None, download, videoid, mystic, title
@@ -282,7 +282,7 @@ async def admins(_, message: Message):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} Mins\n👤**__Requested by:__** {mention}"
+                        f"<b>__sᴋɪᴘᴘᴇᴅ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ__</b>\n\n🎥<b>__sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__ᴅᴜʀᴀᴛɪᴏɴ:__</b> {duration_min} ᴍɪɴs\n👤**__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__** {mention}"
                     ),
                 )
                 os.remove(thumb)
