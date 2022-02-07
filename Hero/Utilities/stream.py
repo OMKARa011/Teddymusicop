@@ -59,7 +59,7 @@ async def start_stream(
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             caption=(
-                f"🎬<b>__Song:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤<b>__Requested by:__ </b>{CallbackQuery.from_user.mention} \n🚧<b>__Queued at:__</b> <b>#{position}!</b>"
+                f"🎬<b>__sᴏɴɢ:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__ᴅᴜʀᴀᴛɪᴏɴ:__</b> {duration_min} \n💡<b>__ɪɴғᴏ:__</b> [ɢᴇᴛ ᴀᴅᴅɪᴛɪᴏɴᴀʟ ɪɴғᴏʀᴍᴀᴛɪᴏɴ](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤<b>__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__ </b>{CallbackQuery.from_user.mention} \n⃣<b>__ǫᴜᴇᴜᴇᴅ ᴀᴛ:__</b> <b>#{position}</b>"
             ),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -69,7 +69,7 @@ async def start_stream(
         return
     else:
         if not await join_stream(CallbackQuery.message.chat.id, file):
-            return await mystic.edit("Error Joining Voice Chat.")
+            return await mystic.edit("ᴇʀʀᴏʀ ᴊᴏɪɴɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...")
         get_queue[CallbackQuery.message.chat.id] = []
         got_queue = get_queue.get(CallbackQuery.message.chat.id)
         title = title
@@ -83,7 +83,7 @@ async def start_stream(
             videoid, CallbackQuery.from_user.id, duration_min, duration_min
         )
         await mystic.delete()
-        cap = f"🎥<b>__Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Requested by:__** {CallbackQuery.from_user.mention}"
+        cap = f"🎥<b>__ᴘʟᴀʏɪɴɢ:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__ɪɴғᴏ:__</b> [ɢᴇᴛ ᴀᴅᴅɪᴛɪᴏɴᴀʟ ɪɴғᴏʀᴍᴀᴛɪᴏɴ](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__** {CallbackQuery.from_user.mention}"
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -132,7 +132,7 @@ async def start_stream_audio(
         final_output = await message.reply_photo(
             photo="Utils/Telegram.JPEG",
             caption=(
-                f"🎬<b>__Audio:__ </b> [Given Audio Via Telegram]({link})\n⏳<b>__Duration:__</b> {duration_min} \n👤<b>__Requested by:__ </b>{message.from_user.mention} \n🚧<b>__Queued at:__</b> <b>#{position}!</b>"
+                f"🎬<b>__ᴀᴜᴅɪᴏ:__ </b> [ɢɪᴠᴇɴ ᴀᴜᴅɪᴏ ᴠɪᴀ ᴛᴇʟᴇɢʀᴀᴍ]({link})\n⏳<b>__ᴅᴜʀᴀᴛɪᴏɴ:__</b> {duration_min} \n👤<b>__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__ </b>{message.from_user.mention} \n⃣<b>__ǫᴜᴇᴜᴇᴅ ᴀᴛ:__</b> <b>#{position}!</b>"
             ),
             reply_markup=audio_markup2,
         )
@@ -141,7 +141,7 @@ async def start_stream_audio(
     else:
         if not await join_stream(message.chat.id, file):
             return await mystic.edit(
-                "Error Joining Voice Chat. Make sure Voice Chat is Enabled."
+                "ᴇʀʀᴏʀ ᴊᴏɪɴɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.../nᴍᴀᴋᴇ sᴜʀᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɪs ᴇɴᴀʙʟᴇᴅ..."
             )
         get_queue[message.chat.id] = []
         got_queue = get_queue.get(message.chat.id)
@@ -156,7 +156,7 @@ async def start_stream_audio(
             videoid, message.from_user.id, duration_min, duration_min
         )
         await mystic.delete()
-        cap = f"🎥<b>__Playing:__ </b>[Given Audio Via Telegram]({link})\n👤**__Requested by:__** {message.from_user.mention}"
+        cap = f"🎥<b>__ᴘʟᴀʏɪɴɢ:__ </b>[ɢɪᴠᴇɴ ᴀᴜᴅɪᴏ ᴠɪᴀ ᴛᴇʟᴇɢʀᴀᴍ]({link})\n👤**__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__** {message.from_user.mention}"
         final_output = await message.reply_photo(
             photo="Utils/Telegram.JPEG",
             reply_markup=InlineKeyboardMarkup(buttons),
