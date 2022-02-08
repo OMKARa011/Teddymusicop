@@ -14,7 +14,7 @@ from Hero.Utilities.youtube import get_yt_info_query, get_yt_info_query_slider
 
 loop = asyncio.get_event_loop()
 
-__MODULE__ = "Song"
+__MODULE__ = "sᴏɴɢ"
 __HELP__ = """
 
 

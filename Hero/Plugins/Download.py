@@ -18,7 +18,7 @@ from Hero.Utilities.download import get_formats, get_type
 user_time = {}
 flex = {}
 
-__MODULE__ = "Global Ban"
+__MODULE__ = "ɢ-ʙᴀɴ"
 __HELP__ = """
 
 **Note:**

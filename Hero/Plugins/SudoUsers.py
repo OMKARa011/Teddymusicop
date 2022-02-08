@@ -16,7 +16,7 @@ from Hero.Database import (add_gban_user, add_off, add_on, add_sudo,
                             remove_gban_user, remove_served_chat, remove_sudo,
                             set_video_limit)
 
-__MODULE__ = "SudoUsers"
+__MODULE__ = "sᴜᴅᴏ ᴜsᴇʀs"
 __HELP__ = """
 
 

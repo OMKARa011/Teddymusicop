@@ -18,7 +18,7 @@ from Hero.Utilities.assistant import get_assistant_details
 
 loop = asyncio.get_event_loop()
 
-__MODULE__ = "Join/Leave"
+__MODULE__ = "ɪɴᴠɪᴛᴇ ᴀssɪsᴛᴀɴᴛ"
 __HELP__ = """
 
 **Note:**

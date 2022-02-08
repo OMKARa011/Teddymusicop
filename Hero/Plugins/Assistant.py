@@ -11,40 +11,40 @@ from Hero import SUDOERS, app, random_assistant
 from Hero.Database import get_assistant, save_assistant
 from Hero.Utilities.assistant import get_assistant_details
 
-__MODULE__ = "Assistant"
+__MODULE__ = "ᴀssɪsᴛᴀɴᴛ"
 __HELP__ = f"""
 
 
-/checkassistant
-- Check the alloted assistant of your chat
+`/checkassistant`
+- ᴄʜᴇᴄᴋ ᴛʜᴇ ᴀʟʟᴏᴛᴇᴅ ᴀssɪsᴛᴀɴᴛ ᴏғ ʏᴏᴜʀ ᴄʜᴀᴛ
 
 
-**Note:**
-- Only for Sudo Users
+**ɴᴏᴛᴇ:**
+-ᴏɴʟʏy ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs
 
-/block [ Reply to a User Message] 
-- Blocks the User from Assistant Account.
+`/block` [ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ ᴍᴇssᴀɢᴇ] 
+- ʙʟᴏᴄᴋs ᴛʜᴇ ᴜsᴇʀ ғʀᴏᴍ ᴀssɪsᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ.
 
-/unblock [ Reply to a User Message] 
-- Unblocks the User from Assistant Account.
+`/unblock` [ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ ᴍᴇssᴀɢᴇ] 
+- ᴜɴʙʟᴏᴄᴋs ᴛʜᴇ ᴜsᴇʀ ғʀᴏᴍ ᴀssɪsᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ.
 
-/approve [ Reply to a User Message] 
-- Approves the User for DM.
+`/approve` [ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ ᴍᴇssᴀɢᴇ] 
+- ᴀᴘᴘʀᴏᴠᴇs ᴛʜᴇ ᴜsᴇʀ ғᴏʀ ᴅᴍ.
 
-/disapprove [ Reply to a User Message] 
-- Disapproves the User for DM.
+`/disapprove` [ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ ᴍᴇssᴀɢᴇ] 
+- ᴅɪsᴀᴘᴘʀᴏᴠᴇs ᴛʜᴇ ᴜsᴇʀ ғᴏʀ ᴅᴍ.
 
-/pfp [ Reply to a Photo] 
-- Changes Assistant account PFP.
+`/pfp` [ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ] 
+- ᴄʜᴀɴɢᴇs ᴀssɪsᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ ᴘғᴘ.
 
-/bio [Bio text] 
-- Changes Bio of Assistant Account.
+`/bio` [ʙɪᴏ ᴛᴇxᴛ] 
+- ᴄʜᴀɴɢᴇs ʙɪᴏ ᴏғ ᴀssɪsᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ.
 
-/changeassistant [ASS NUMBER]
-- Change the previoius alloted assistant to new one.
+`/changeassistant` [ASS NUMBER]
+- ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴘʀᴇᴠɪᴏɪᴜs ᴀʟʟᴏᴛᴇᴅ ᴀssɪsᴛᴀɴᴛ ᴛᴏ ɴᴇᴡ ᴏɴᴇ.
 
-/setassistant [ASS NUMBER or Random]
-- Set a assistant account for chat. 
+`/setassistant` [ᴀss ɴᴜᴍʙᴇʀ ᴏʀ ʀᴀɴᴅᴏᴍ]
+- sᴇᴛ ᴀ ᴀssɪsᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ ғᴏʀ ᴄʜᴀᴛ. 
 """
 
 

@@ -18,7 +18,7 @@ from Hero.Utilities.tasks import add_task, rm_task
 
 # Eval and Sh module from WBB
 
-__MODULE__ = "Broadcast"
+__MODULE__ = "ʙʀᴏᴀᴅᴄᴀsᴛ"
 __HELP__ = """
 **Note:**
 Only for Sudo Users.

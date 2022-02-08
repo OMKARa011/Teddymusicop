@@ -9,7 +9,7 @@ from pyrogram.types import Message
 from Hero import BOT_USERNAME, MUSIC_BOT_NAME, app, boottime
 from Hero.Utilities.ping import get_readable_time
 
-__MODULE__ = "Ping"
+__MODULE__ = "ᴘɪɴɢ"
 __HELP__ = """
 
 /ping - Check if Bot is alive or not.
