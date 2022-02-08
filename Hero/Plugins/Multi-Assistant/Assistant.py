@@ -40,7 +40,7 @@ async def awaiting_message(client, message):
     user_id = message.from_user.id
     if await is_pmpermit_approved(user_id):
         return
-    async for m in client.iter_history(user_id, limit=6):
+    async for m in client.iter_history(user_id, limit=15):
         if m.reply_markup:
             await m.delete()
     if str(user_id) in flood:
@@ -48,14 +48,14 @@ async def awaiting_message(client, message):
     else:
         flood[str(user_id)] = 1
     if flood[str(user_id)] > 5:
-        await message.reply_text("Spam Detected. User Blocked")
+        await message.reply_text("sᴘᴀᴍ ᴅᴇᴛᴇᴄᴛᴇᴅ ᴜsᴇʀ ʙʟᴏᴄᴋᴇᴅ...")
         await client.send_message(
             LOG_GROUP_ID,
-            f"**Spam Detect Block On Assistant**\n\n- **Blocked User:** {message.from_user.mention}\n- **User ID:** {message.from_user.id}",
+            f"**sᴘᴀᴍ ᴅᴇᴛᴇᴄᴛ ʙʟᴏᴄᴋ ᴏɴ ᴀssɪsᴛᴀɴᴛ**\n\n- **ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀ:** {message.from_user.mention}\n- **ᴜsᴇʀ ɪᴅ:** {message.from_user.id}",
         )
         return await client.block_user(user_id)
     await message.reply_text(
-        f"Hello, I am {MUSIC_BOT_NAME}'s Assistant.\n\nPlease dont spam here , else you'll get blocked.\nFor more Help start :- @{BOT_USERNAME}"
+        f"ʜᴇʟʟᴏ, ɪ ᴀᴍ {MUSIC_BOT_NAME}'s ᴀssɪsᴛᴀɴᴛ.\n\nᴘʟᴇᴀsᴇ ᴅᴏɴᴛ sᴘᴀᴍ ʜᴇʀᴇ , ᴇʟsᴇ ʏᴏᴜ'ʟʟ ɢᴇᴛ ʙʟᴏᴄᴋᴇᴅ.\nғᴏʀ ᴍᴏʀᴇ ʜᴇʟᴘ sᴛᴀʀᴛ :- @{BOT_USERNAME}"
     )
 
 
@@ -69,13 +69,13 @@ async def awaiting_message(client, message):
 async def pm_approve(client, message):
     if not message.reply_to_message:
         return await eor(
-            message, text="Reply to a user's message to approve."
+            message, text="ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ's ᴍᴇssᴀɢᴇ ᴛᴏ ᴀᴘᴘʀᴏᴠᴇ..."
         )
     user_id = message.reply_to_message.from_user.id
     if await is_pmpermit_approved(user_id):
-        return await eor(message, text="User is already approved to pm")
+        return await eor(message, text="ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀᴘᴘʀᴏᴠᴇᴅ ᴛᴏ ᴘᴍ")
     await approve_pmpermit(user_id)
-    await eor(message, text="User is approved to pm")
+    await eor(message, text="ᴜsᴇʀ ɪs ᴀᴘᴘʀᴏᴠᴇᴅ ᴛᴏ ᴘᴍ")
 
 
 @Client.on_message(
@@ -88,11 +88,11 @@ async def pm_approve(client, message):
 async def pm_disapprove(client, message):
     if not message.reply_to_message:
         return await eor(
-            message, text="Reply to a user's message to disapprove."
+            message, text="ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ's ᴍᴇssᴀɢᴇ ᴛᴏ ᴅɪsᴀᴘᴘʀᴏᴠᴇ..."
         )
     user_id = message.reply_to_message.from_user.id
     if not await is_pmpermit_approved(user_id):
-        await eor(message, text="User is already disapproved to pm")
+        await eor(message, text="ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ ᴛᴏ ᴘᴍ...")
         async for m in client.iter_history(user_id, limit=6):
             if m.reply_markup:
                 try:
@@ -101,7 +101,7 @@ async def pm_disapprove(client, message):
                     pass
         return
     await disapprove_pmpermit(user_id)
-    await eor(message, text="User is disapproved to pm")
+    await eor(message, text="ᴜsᴇʀ ɪs ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ ᴛᴏ ᴘᴍ...")
 
 
 @Client.on_message(
@@ -113,9 +113,9 @@ async def pm_disapprove(client, message):
 )
 async def block_user_func(client, message):
     if not message.reply_to_message:
-        return await eor(message, text="Reply to a user's message to block.")
+        return await eor(message, text="ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ's ᴍᴇssᴀɢᴇ ᴛᴏ ʙʟᴏᴄᴋ...")
     user_id = message.reply_to_message.from_user.id
-    await eor(message, text="Successfully blocked the user")
+    await eor(message, text="sᴜᴄᴄᴇssғᴜʟʟʏ ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ᴜsᴇʀ...")
     await client.block_user(user_id)
 
 
@@ -129,11 +129,11 @@ async def block_user_func(client, message):
 async def unblock_user_func(client, message):
     if not message.reply_to_message:
         return await eor(
-            message, text="Reply to a user's message to unblock."
+            message, text="ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ's ᴍᴇssᴀɢᴇ ᴛᴏ ᴜɴʙʟᴏᴄᴋ..."
         )
     user_id = message.reply_to_message.from_user.id
     await client.unblock_user(user_id)
-    await eor(message, text="Successfully Unblocked the user")
+    await eor(message, text="sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ᴜsᴇʀ")
 
 
 @Client.on_message(
@@ -145,11 +145,11 @@ async def unblock_user_func(client, message):
 )
 async def set_pfp(client, message):
     if not message.reply_to_message or not message.reply_to_message.photo:
-        return await eor(message, text="Reply to a photo.")
+        return await eor(message, text="ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ...")
     photo = await message.reply_to_message.download()
     try:
         await client.set_profile_photo(photo=photo)
-        await eor(message, text="Successfully Changed PFP.")
+        await eor(message, text="sᴜᴄᴄᴇssғᴜʟʟʏ ᴄʜᴀɴɢᴇᴅ ᴘʀᴏғɪʟᴇ...")
     except Exception as e:
         await eor(message, text=e)
 
@@ -163,16 +163,16 @@ async def set_pfp(client, message):
 )
 async def set_bio(client, message):
     if len(message.command) == 1:
-        return await eor(message, text="Give some text to set as bio.")
+        return await eor(message, text="ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ sᴇᴛ ᴀs ʙɪᴏ...")
     elif len(message.command) > 1:
         bio = message.text.split(None, 1)[1]
         try:
             await client.update_profile(bio=bio)
-            await eor(message, text="Changed Bio.")
+            await eor(message, text="ʙɪᴏ ᴄʜᴀɴɢᴇᴅ...")
         except Exception as e:
             await eor(message, text=e)
     else:
-        return await eor(message, text="Give some text to set as bio.")
+        return await eor(message, text="ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ sᴇᴛ ᴀs ʙɪᴏ...")
 
 
 async def eor(msg: Message, **kwargs):
