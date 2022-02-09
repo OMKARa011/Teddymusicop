@@ -424,7 +424,7 @@ async def skip_video_stream(chat_id: int, ytlink: str, quality, mystic):
             )
         except:
             return await mystic.edit(
-                "Failed to Change Video Stream.. Please Skip Again."
+                "ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍ ᴘʟᴇᴀsᴇ sᴋɪᴘ ᴀɢᴀɪɴ..."
             )
     elif int(assistant) == 2:
         try:
@@ -434,7 +434,7 @@ async def skip_video_stream(chat_id: int, ytlink: str, quality, mystic):
             )
         except:
             return await mystic.edit(
-                "Failed to Change Video Stream.. Please Skip Again."
+                "ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍ ᴘʟᴇᴀsᴇ sᴋɪᴘ ᴀɢᴀɪɴ..."
             )
     elif int(assistant) == 3:
         try:
@@ -444,7 +444,7 @@ async def skip_video_stream(chat_id: int, ytlink: str, quality, mystic):
             )
         except:
             return await mystic.edit(
-                "Failed to Change Video Stream.. Please Skip Again."
+                "ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍ ᴘʟᴇᴀsᴇ sᴋɪᴘ ᴀɢᴀɪɴ..."
             )
     elif int(assistant) == 4:
         try:
@@ -454,7 +454,7 @@ async def skip_video_stream(chat_id: int, ytlink: str, quality, mystic):
             )
         except:
             return await mystic.edit(
-                "Failed to Change Video Stream.. Please Skip Again."
+                "ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍ ᴘʟᴇᴀsᴇ sᴋɪᴘ ᴀɢᴀɪɴ..."
             )
     elif int(assistant) == 5:
         try:
@@ -464,7 +464,7 @@ async def skip_video_stream(chat_id: int, ytlink: str, quality, mystic):
             )
         except:
             return await mystic.edit(
-                "Failed to Change Video Stream.. Please Skip Again."
+                "ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍ ᴘʟᴇᴀsᴇ sᴋɪᴘ ᴀɢᴀɪɴ..."
             )
 
 
@@ -521,7 +521,7 @@ async def playout_end(pytgclients, chat_id):
                     chat_id,
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"🎥<b>__Started Playing:__</b> {title} \n👤<b>__Requested by:__ </b> {mention}",
+                    caption=f"🎥<b>__sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ:__</b> {title} \n👤<b>__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__ </b> {mention}",
                 )
                 await start_timer(
                     videoid,
@@ -549,7 +549,7 @@ async def playout_end(pytgclients, chat_id):
                     except:
                         return await app.send_message(
                             chat_id,
-                            "Some Error occured while switching video stream. Playout is on hold now. Please skip the stream to resume the voice chat.",
+                            "sᴏᴍᴇ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ᴡʜɪʟᴇ sᴡɪᴛᴄʜɪɴɢ ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍ. ᴘʟᴀʏᴏᴜᴛ ɪs ᴏɴ ʜᴏʟᴅ ɴᴏᴡ. ᴘʟᴇᴀsᴇ sᴋɪᴘ ᴛʜᴇ sᴛʀᴇᴀᴍ ᴛᴏ ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...",
                         )
                     c_title = db_mem[afk]["chat_title"]
                     chat_title = await specialfont_to_normal(c_title)
@@ -560,7 +560,7 @@ async def playout_end(pytgclients, chat_id):
                         photo="Utils/Telegram.JPEG",
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"**Video Streaming**\n\n🎥<b>__Started Playing:__ </b>Next Video from Telegram \n👤**__Requested by:__** {mention}"
+                            f"**ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ**\n\n🎥<b>__sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ:__ </b>ɴᴇxᴛ ᴠɪᴅᴇᴏ ғʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ \n👤**__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__** {mention}"
                         ),
                     )
                 else:
@@ -580,7 +580,7 @@ async def playout_end(pytgclients, chat_id):
                     if nrs == 0:
                         return await app.send_message(
                             chat_id,
-                            "Failed to fetch Video Formats for next stream. Please skip the stream to resume the voice chat.",
+                            "ғᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ ᴠɪᴅᴇᴏ ғᴏʀᴍᴀᴛs ғᴏʀ ɴᴇxᴛ sᴛʀᴇᴀᴍ. ᴘʟᴇᴀsᴇ sᴋɪᴘ ᴛʜᴇ sᴛʀᴇᴀᴍ ᴛᴏ ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...",
                         )
                     try:
                         await pytgclients.change_stream(
@@ -592,7 +592,7 @@ async def playout_end(pytgclients, chat_id):
                     except:
                         return await app.send_message(
                             chat_id,
-                            "Some Error occured while switching video stream. Playout is on hold now. Please skip the stream to resume the voice chat.",
+                            "sᴏᴍᴇ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ᴡʜɪʟᴇ sᴡɪᴛᴄʜɪɴɢ ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍ. ᴘʟᴀʏᴏᴜᴛ ɪs ᴏɴ ʜᴏʟᴅ ɴᴏᴡ. ᴘʟᴇᴀsᴇ sᴋɪᴘ ᴛʜᴇ sᴛʀᴇᴀᴍ ᴛᴏ ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...",
                         )
                     theme = await check_theme(chat_id)
                     c_title = db_mem[afk]["chat_title"]
@@ -610,7 +610,7 @@ async def playout_end(pytgclients, chat_id):
                         photo=thumb,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"**Video Streaming**\n\n🎥<b>__Started Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={afk}) \n👤**__Requested by:__** {mention}"
+                            f"**ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ**\n\n🎥<b>__sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={afk}) \n👤**__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__** {mention}"
                         ),
                     )
                     os.remove(thumb)
@@ -626,7 +626,7 @@ async def playout_end(pytgclients, chat_id):
             else:
                 mystic = await app.send_message(
                     chat_id,
-                    "**Playlist Function**\n\n__Downloading Next Music From Playlist....__",
+                    "**ᴘʟᴀʏʟɪsᴛ ғᴜɴᴄᴛɪᴏɴ...**\n\n__ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴍᴜsɪᴄ ғʀᴏᴍ ᴘʟᴀʏʟɪsᴛ...__",
                 )
                 (
                     title,
@@ -635,7 +635,7 @@ async def playout_end(pytgclients, chat_id):
                     thumbnail,
                 ) = get_yt_info_id(afk)
                 mystic = await mystic.edit(
-                    f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+                    f"**{MUSIC_BOT_NAME} 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙚𝙧**\n**ᴛɪᴛʟᴇ:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
                 )
                 loop = asyncio.get_event_loop()
                 downloaded_file = await loop.run_in_executor(
@@ -667,7 +667,7 @@ async def playout_end(pytgclients, chat_id):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"🎥<b>__Started Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={afk}) \n👤**__Requested by:__** {mention}"
+                        f"🎥<b>__sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={afk}) \n👤**__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__** {mention}"
                     ),
                 )
                 os.remove(thumb)
