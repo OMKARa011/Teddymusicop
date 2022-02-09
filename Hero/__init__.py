@@ -104,7 +104,7 @@ async def initiate_bot():
     )
     console.print(header)
     with console.status(
-        "[magenta] Yukki Music Bot Booting...",
+        "[magenta] Hero Music Bot Booting...",
     ) as status:
         console.print("┌ [red]Booting Up The Clients...\n")
         await app.start()
@@ -253,7 +253,7 @@ async def initiate_bot():
             await install_requirements(
                 "pip3 install --no-cache-dir -r requirements.txt"
             )
-            console.print("└ [red]Git Client Update Completed\n")
+            console.print("└ [red]ɢɪᴛ ᴄʟɪᴇɴᴛ ᴜᴘᴅᴀᴛᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ\n")
 
 
 loop.run_until_complete(initiate_bot())
