@@ -21,14 +21,14 @@ flex = {}
 __MODULE__ = "ɢ-ʙᴀɴ"
 __HELP__ = """
 
-**Note:**
-Only for Sudo Users.
+**ɴᴏᴛᴇ:**
+ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs.
 
-/gban [Username or Reply to a user]
-- Ban a user globally in Bot's Served Chats and prevents user from using bot commands.
+`/gban` [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ]
+- ʙᴀɴ ᴀ ᴜsᴇʀ ɢʟᴏʙᴀʟʟʏ ɪɴ ʙᴏᴛ's sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴀɴᴅ ᴘʀᴇᴠᴇɴᴛs ᴜsᴇʀ ғʀᴏᴍ ᴜsɪɴɢ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs.
 
-/ungban [Username or Reply to a user]
-- Remove a user from Bot's GBan List.
+`/ungban` [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ]
+- ʀᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ ʙᴏᴛ's ɢʙᴀɴ ʟɪsᴛ.
 """
 
 
@@ -71,11 +71,11 @@ async def ytdata(_, CallbackQuery):
 
 
 inl = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="Downloading......", callback_data=f"down")]]
+    [[InlineKeyboardButton(text="ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...", callback_data=f"down")]]
 )
 
 upl = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="Uploading......", callback_data=f"down")]]
+    [[InlineKeyboardButton(text="ᴜᴘʟᴏᴀᴅɪɴɢ...", callback_data=f"down")]]
 )
 
 
@@ -83,15 +83,15 @@ def inl_mark(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="Download or Upload Failed......", callback_data=f"down"
+                text="ᴅᴏᴡɴʟᴏᴀᴅ ᴏʀ ᴜᴘʟᴏᴀᴅ ғᴀɪʟᴇᴅ...", callback_data=f"down"
             )
         ],
         [
             InlineKeyboardButton(
-                text="⬅️  Go Back", callback_data=f"good {videoid}|{user_id}"
+                text="⬅️  ɢᴏ ʙᴀᴄᴋ", callback_data=f"good {videoid}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="🗑 Close Menu", callback_data=f"close2"
+                text="🗑 ᴄʟᴏsᴇ ᴍᴇɴᴜ", callback_data=f"close2"
             ),
         ],
     ]
@@ -109,7 +109,7 @@ async def boom(_, CallbackQuery):
     user_id = CallbackQuery.from_user.id
     type, format_id, videoid = callback_request.split("||")
     mystic = await CallbackQuery.edit_message_text(
-        "Download Started\n\nDownloading speed could be slow. Please hold on..",
+        "ᴅᴏᴡɴʟᴏᴀᴅ sᴛᴀʀᴛᴇᴅ...\n\nᴅᴏᴡɴʟᴏᴀᴅɪɴɢ sᴘᴇᴇᴅ ᴄᴏᴜʟᴅ ʙᴇ sʟᴏᴡ ᴘʟᴇᴀsᴇ ʜᴏʟᴅ ᴏɴ...",
         reply_markup=inl,
     )
     yturl = f"https://www.youtube.com/watch?v={videoid}"
@@ -121,16 +121,16 @@ async def boom(_, CallbackQuery):
         thumb_image_path = result["thumbnails"][0]["url"]
         channel = channel = result["channel"]["name"]
         fetched = f"""
-🔍**Track Downloaded**
+🔍**ᴛʀᴀᴄᴋ ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ**
 
-❇️**Title:** {title}
+🌸**ᴛɪᴛʟᴇ:** {title}
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-🎥**Channel Name:** {channel}
-🔗**Video Link:** [Link]({yturl})
+⏳**ᴅᴜʀᴀᴛɪᴏɴ:** {duration} Mins
+🧿**ᴠɪᴇᴡs:** `{views}`
+🎥**ᴄʜᴀɴɴᴇʟ ɴᴀᴍᴇ:** {channel}
+🔗**ᴠɪᴅᴇᴏ ʟɪɴᴋ:** [Link]({yturl})
 
-⚡️ __Youtube Inline Download Powered By {MUSIC_BOT_NAME}__"""
+⚡️ __ʏᴏᴜᴛᴜʙᴇ ɪɴʟɪɴᴇ ᴅᴏᴡɴʟᴏᴀᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ {MUSIC_BOT_NAME}__"""
     filext = "%(title)s.%(ext)s"
     userdir = os.path.join(os.getcwd(), "downloads", str(user_id))
     if not os.path.isdir(userdir):
@@ -231,12 +231,12 @@ async def boom(_, CallbackQuery):
             )
         )
     else:
-        print("med not found")
+        print("ᴍᴇᴅ ɴᴏᴛ ғᴏᴜɴᴅ")
 
 
 def p_mark(link, channel):
     buttons = [
-        [InlineKeyboardButton(text="Watch on Youtube", url=f"{link}")],
+        [InlineKeyboardButton(text="ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ", url=f"{link}")],
     ]
     return buttons
 
@@ -245,7 +245,7 @@ async def send_file(
     CallbackQuery, med, filename, videoid, user_id, link, channel
 ):
     await CallbackQuery.edit_message_text(
-        "Upload Started\n\nUploading speed could be slow. Please hold on..",
+        "ᴜᴘʟᴏᴀᴅ sᴛᴀʀᴛᴇᴅ...\n\nᴜᴘʟᴏᴀᴅɪɴɢ sᴘᴇᴇᴅ ᴄᴏᴜʟᴅ ʙᴇ sʟᴏᴡ ᴘʟᴇᴀsᴇ ʜᴏʟᴅ oɴ...",
         reply_markup=upl,
     )
     try:

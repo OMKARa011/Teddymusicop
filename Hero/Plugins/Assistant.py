@@ -53,7 +53,7 @@ ass_num_list = ["1", "2", "3", "4", "5"]
 
 @app.on_message(filters.command(["change", "changeassistant"]) & filters.user(SUDOERS))
 async def assis_change(_, message: Message):
-    usage = f"**Usage:**\n/changeassistant [ASS_NO]\n\nSelect from them\n{' | '.join(ass_num_list)}"
+    usage = f"**ᴜsᴀɢᴇ:**\n`/changeassistant` [ASS_NO]\n\nsᴇʟᴇᴄᴛ ғʀᴏᴍ ᴛʜᴇᴍ\n{' | '.join(ass_num_list)}"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     num = message.text.split(None, 1)[1].strip()
@@ -63,7 +63,7 @@ async def assis_change(_, message: Message):
     _assistant = await get_assistant(message.chat.id, "assistant")
     if not _assistant:
         return await message.reply_text(
-            "No Pre-Saved Assistant Found.\n\nYou can set Assistant Via /setassistant"
+            "ɴᴏ ᴘʀᴇ-sᴀᴠᴇᴅ ᴀssɪsᴛᴀɴᴛ ғᴏᴜɴᴅ...\n\nʏᴏᴜ ᴄᴀɴ sᴇᴛ ᴀssɪsᴛᴀɴᴛ ᴠɪᴀ /setassistant"
         )
     else:
         ass = _assistant["saveassistant"]
@@ -72,7 +72,7 @@ async def assis_change(_, message: Message):
     }
     await save_assistant(message.chat.id, "assistant", assis)
     await message.reply_text(
-        f"**Changed Assistant**\n\nChanged Assistant Account from **{ass}** to Assistant Number **{ass_num}**"
+        f"**ᴄʜᴀɴɢᴇᴅ ᴀssɪsᴛᴀɴᴛ**\n\nᴄʜᴀɴɢᴇᴅ ᴀssɪsᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ **{ass}** ᴛᴏ ᴀssɪsᴛᴀɴᴛ ɴᴜᴍʙᴇʀ **{ass_num}**"
     )
 
 
@@ -81,7 +81,7 @@ ass_num_list2 = ["1", "2", "3", "4", "5", "Random"]
 
 @app.on_message(filters.command(["set", "setassistant"]) & filters.user(SUDOERS))
 async def assis_change(_, message: Message):
-    usage = f"**Usage:**\n/setassistant [ASS_NO or Random]\n\nSelect from them\n{' | '.join(ass_num_list2)}\n\nUse 'Random' to set random Assistant"
+    usage = f"**ᴜsᴀɢᴇ:**\n`/setassistant` [ASS_NO or Random]\n\nsᴇʟᴇᴄᴛ ғʀᴏᴍ ᴛʜᴇᴍ\n{' | '.join(ass_num_list2)}\n\nᴜsᴇ 'Random' ᴛᴏ sᴇᴛ ʀᴀɴᴅᴏᴍ ᴀssɪsᴛᴀɴᴛ"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     query = message.text.split(None, 1)[1].strip()
@@ -94,7 +94,7 @@ async def assis_change(_, message: Message):
     _assistant = await get_assistant(message.chat.id, "assistant")
     if not _assistant:
         await message.reply_text(
-            f"**__Yukki Music Bot Assistant Alloted__**\n\nAssistant No. **{ran_ass}**"
+            f"**__ʜᴇʀᴏ ᴍᴜsɪᴄs ʙᴏᴛ ᴀssɪsᴛᴀɴᴛ ᴀʟʟᴏᴛᴇᴅ__**\n\nᴀssɪsᴛᴀɴᴛ ɴᴏ. **{ran_ass}**"
         )
         assis = {
             "saveassistant": ran_ass,
@@ -103,7 +103,7 @@ async def assis_change(_, message: Message):
     else:
         ass = _assistant["saveassistant"]
         return await message.reply_text(
-            f"Pre-Saved Assistant Number {ass} Found.\n\nYou can change Assistant Via /changeassistant"
+            f"ᴘʀᴇ-sᴀᴠᴇᴅ ᴀssɪsᴛᴀɴᴛ ɴᴜᴍʙᴇʀ {ass} ғᴏᴜɴᴅ...\n\nʏᴏᴜ ᴄᴀɴ ᴄʜᴀɴɢᴇ ᴀssɪsᴛᴀɴᴛ ᴠɪᴀ /changeassistant"
         )
 
 
@@ -112,10 +112,10 @@ async def check_ass(_, message: Message):
     _assistant = await get_assistant(message.chat.id, "assistant")
     if not _assistant:
         return await message.reply_text(
-            "No Pre-Saved Assistant Found.\n\nYou can set Assistant Via /play"
+            "ɴᴏ ᴘʀᴇ-sᴀᴠᴇᴅ ᴀssɪsᴛᴀɴᴛ ғᴏᴜɴᴅ...\n\nʏᴏᴜ ᴄᴀɴ sᴇᴛ ᴀssɪsᴛᴀɴᴛ ᴠɪᴀ /play"
         )
     else:
         ass = _assistant["saveassistant"]
         return await message.reply_text(
-            f"Pre-Saved Assistant Found\n\nAssistanty Number {ass} "
+            f"ᴘʀᴇ-sᴀᴠᴇᴅ ᴀssɪsᴛᴀɴᴛ ғᴏᴜɴᴅ\n\n ᴀssɪsᴛᴀɴᴛ ɴᴜᴍʙᴇʀ {ass} "
         )

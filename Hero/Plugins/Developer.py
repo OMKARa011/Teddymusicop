@@ -20,20 +20,20 @@ from Hero.Utilities.tasks import add_task, rm_task
 
 __MODULE__ = "ʙʀᴏᴀᴅᴄᴀsᴛ"
 __HELP__ = """
-**Note:**
-Only for Sudo Users.
+**ɴᴏᴛᴇ:**
+ᴏɴʟʏ ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs.
 
 
-/broadcast [Message or Reply to a Message]
-- Broadcast any message to Bot's Served Chats.
+`/broadcast` [ᴍᴇssᴀɢᴇ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ]
+- ʙʀᴏᴀᴅᴄᴀsᴛ ᴀɴʏ ᴍᴇssᴀɢᴇ ᴛᴏ ʙᴏᴛ's sᴇʀᴠᴇᴅ ᴄʜᴀᴛs.
 
 
-/broadcast_pin [Message or Reply to a Message]
-- Broadcast any message to Bot's Served Chats with message getting Pinned in chat [Disabled Notifications].
+`/broadcast_pin` [ᴍᴇssᴀɢᴇ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ]
+- ʙʀᴏᴀᴅᴄᴀsᴛ ᴀɴʏ ᴍᴇssᴀɢᴇ ᴛᴏ ʙᴏᴛ's sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴡɪᴛʜ ᴍᴇssᴀɢᴇ ɢᴇᴛᴛɪɴɢ ᴘɪɴɴᴇᴅ ɪɴ ᴄʜᴀᴛ [ᴅɪsᴀʙʟᴇᴅ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴs].
 
 
-/broadcast_pin_loud [Message or Reply to a Message]
-- Broadcast any message to Bot's Served Chats with message getting Pinned in chat [Enabled Notifications].
+`/broadcast_pin_loud` [ᴍᴇssᴀɢᴇ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ]
+- ʙʀᴏᴀᴅᴄᴀsᴛ ᴀɴʏ ᴍᴇssᴀɢᴇ ᴛᴏ ʙᴏᴛ's sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴡɪᴛʜ ᴍᴇssᴀɢᴇ ɢᴇᴛᴛɪɴɢ ᴘɪɴɴᴇᴅ ɪɴ ᴄʜᴀᴛ [ᴇɴᴀʙʟᴇᴅ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴs].
 """
 
 
@@ -60,7 +60,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 async def executor(client, message):
     if len(message.command) < 2:
         return await edit_or_reply(
-            message, text="__Nigga Give me some command to execute.__"
+            message, text="__ɴɪɢɢᴀ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴇxᴇᴄᴜᴛᴇ...__"
         )
     try:
         cmd = message.text.split(" ", maxsplit=1)[1]
@@ -106,7 +106,7 @@ async def executor(client, message):
         )
         await message.reply_document(
             document=filename,
-            caption=f"**INPUT:**\n`{cmd[0:980]}`\n\n**OUTPUT:**\n`Attached Document`",
+            caption=f"**ɪɴᴘᴜᴛ:**\n`{cmd[0:980]}`\n\n**ᴏᴜᴛᴘᴜᴛ:**\n`ᴀᴛᴛᴀᴄʜᴇᴅ ᴅᴏᴄᴜᴍᴇɴᴛ`",
             quote=False,
             reply_markup=keyboard,
         )
@@ -145,7 +145,7 @@ async def runtime_func_cq(_, cq):
 )
 async def shellrunner(client, message):
     if len(message.command) < 2:
-        return await edit_or_reply(message, text="**Usage:**\n/sh git pull")
+        return await edit_or_reply(message, text="**ᴜsᴀɢᴇ:**\n/sh ɢɪᴛ ᴘᴜʟʟ")
     text = message.text.split(None, 1)[1]
     if "\n" in text:
         code = text.split("\n")

@@ -12,7 +12,7 @@ from Hero.Utilities.ping import get_readable_time
 __MODULE__ = "ᴘɪɴɢ"
 __HELP__ = """
 
-/ping - Check if Bot is alive or not.
+`/ping` - ᴄʜᴇᴄᴋ ɪғ ʙᴏᴛ ɪs ᴀʟɪᴠᴇ ᴏʀ ɴᴏᴛ.
 """
 
 
@@ -22,10 +22,10 @@ async def bot_sys_stats():
     mem = psutil.virtual_memory().percent
     disk = psutil.disk_usage("/").percent
     stats = f"""
-Uptime: {get_readable_time((bot_uptime))}
-CPU: {cpu}%
-RAM: {mem}%
-Disk: {disk}%"""
+ᴜᴘᴛɪᴍᴇ: {get_readable_time((bot_uptime))}
+ᴄᴘᴜ: {cpu}%
+ʀᴀᴍ: {mem}%
+ᴅɪsᴋ: {disk}%"""
     return stats
 
 
@@ -33,12 +33,12 @@ Disk: {disk}%"""
 async def ping(_, message):
     start = datetime.now()
     response = await message.reply_photo(
-        photo="Utils/Query.jpg",
-        caption=">> Pong!",
+        photo="Utils/Telegram.JPEG",
+        caption="🌸 ᴘɪɴɢ...",
     )
     uptime = await bot_sys_stats()
     end = datetime.now()
     resp = (end - start).microseconds / 1000
     await response.edit_text(
-        f"**Pong!**\n`⚡{resp} ms`\n\n<b><u>{MUSIC_BOT_NAME} System Stats:</u></b>{uptime}"
+        f"**💐 ᴘᴏɴɢ**\n`⚡{resp} ᴍs`\n\n**{MUSIC_BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs:**{uptime}"
     )

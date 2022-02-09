@@ -34,13 +34,16 @@ loop = asyncio.get_event_loop()
 __MODULE__ = "ᴠɪᴅᴇᴏ ᴄᴀʟʟs"
 __HELP__ = f"""
 
-/play [Reply to any Video] or [YT Link] or [Music Name]
-- Stream Video on Voice Chat
+`/play` [ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴀᴜᴅɪᴏ] ᴏʀ [ʏᴛ ʟɪɴᴋ] ᴏʀ [ᴍᴜsɪᴄ ɴᴀᴍᴇ]
+- ᴘʟᴀʏs ᴀᴜᴅɪᴏ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ
 
-**For Sudo User:-**
+`/vplay` [ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴠɪᴅᴇᴏ] ᴏʀ [ʏᴛ ʟɪɴᴋ] ᴏʀ [ᴍᴜsɪᴄ ɴᴀᴍᴇ]
+- sᴛʀᴇᴀᴍ ᴠɪᴅᴇᴏ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ
 
-/set_video_limit [Number of Chats]
-- Set a maximum Number of Chats allowed for Video Calls at a time.
+**ғᴏʀ sᴜᴅᴏ ᴜsᴇʀ:-**
+
+`/set_video_limit` [ɴᴜᴍʙᴇʀ ᴏғ ᴄʜᴀᴛs]
+- sᴇᴛ ᴀ ᴍᴀxɪᴍᴜᴍ ɴᴜᴍʙᴇʀ ᴏғ ᴄʜᴀᴛs ᴀʟʟᴏᴡᴇᴅ ғᴏʀ ᴠɪᴅᴇᴏ ᴄᴀʟʟs ᴀᴛ ᴀ ᴛɪᴍᴇ.
 
 
 """

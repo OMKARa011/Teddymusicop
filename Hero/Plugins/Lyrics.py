@@ -11,11 +11,11 @@ from Hero import MUSIC_BOT_NAME, app
 __MODULE__ = "ʟʏʀɪᴄs"
 __HELP__ = """
 
-/Lyrics [Music Name]
-- Searches Lyrics for the particular Music on web.
+/Lyrics [ᴍᴜsɪᴄ ɴᴀᴍᴇ]
+- sᴇᴀʀᴄʜᴇs ʟʏʀɪᴄs ғᴏʀ ᴛʜᴇ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴍᴜsɪᴄ ᴏɴ ᴡᴇʙ.
 
-**Note**:
-Inline button of Lyrics has some bugs. Searches only 50% results. You can use command instead if you want lyrics for any playing music.
+**ɴᴏᴛᴇ**:
+ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴ ᴏғ ʟʏʀɪᴄs ʜᴀs sᴏᴍᴇ ʙᴜɢs. sᴇᴀʀᴄʜᴇs ᴏɴʟʏ 50% ʀᴇsᴜʟᴛs. ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴄᴏᴍᴍᴀɴᴅ ɪɴsᴛᴇᴀᴅ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ʟʏʀɪᴄs ғᴏʀ ᴀɴʏ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ.
 
 """
 
@@ -28,7 +28,7 @@ async def lyricssex(_, CallbackQuery):
         id, user_id = callback_request.split("|")
     except Exception as e:
         return await CallbackQuery.message.edit(
-            f"Error Occured\n**Possible reason could be**:{e}"
+            f"ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ\n**ᴘᴏssɪʙʟᴇ ʀᴇᴀsᴏɴ ᴄᴏᴜʟᴅ ʙᴇ**:{e}"
         )
     url = f"https://www.youtube.com/watch?v={id}"
     print(url)
@@ -38,7 +38,7 @@ async def lyricssex(_, CallbackQuery):
             title = result["title"]
     except Exception as e:
         return await CallbackQuery.answer(
-            "Sound not found. Youtube issues.", show_alert=True
+            "sᴏᴜɴᴅ ɴᴏᴛ ғᴏᴜɴᴅ ʏᴏᴜᴛᴜʙᴇ ɪssᴜᴇs...", show_alert=True
         )
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
     y = lyricsgenius.Genius(x)
@@ -47,21 +47,21 @@ async def lyricssex(_, CallbackQuery):
     S = y.search_song(t, get_full_info=False)
     if S is None:
         return await CallbackQuery.answer(
-            "Lyrics not found :p", show_alert=True
+            "ʟʏʀɪᴄs ɴᴏᴛ ғᴏᴜɴᴅ...", show_alert=True
         )
     await CallbackQuery.message.delete()
     userid = CallbackQuery.from_user.id
     usr = f"[{CallbackQuery.from_user.first_name}](tg://user?id={userid})"
     xxx = f"""
-**Lyrics Search Powered By {MUSIC_BOT_NAME}**
+**ʟʏʀɪᴄs sᴇᴀʀᴄʜ ᴘᴏᴡᴇʀᴇᴅ ʙʏ {MUSIC_BOT_NAME}**
 
-**Searched By:-** {usr}
-**Searched Song:-** __{title}__
+**sᴇᴀʀᴄʜᴇᴅ ʙʏ:-** {usr}
+**sᴇᴀʀᴄʜᴇᴅ sᴏɴɢ:-** __{title}__
 
-**Found Lyrics For:-** __{S.title}__
-**Artist:-** {S.artist}
+**ғᴏᴜɴᴅ ʟʏʀɪᴄs ғᴏʀ:-** __{S.title}__
+**ᴀʀᴛɪsᴛ:-** {S.artist}
 
-**__Lyrics:__**
+**__ʟʏʀɪᴄs:__**
 
 {S.lyrics}"""
     if len(xxx) > 4096:
@@ -70,7 +70,7 @@ async def lyricssex(_, CallbackQuery):
             out_file.write(str(xxx.strip()))
         await CallbackQuery.message.reply_document(
             document=filename,
-            caption=f"**OUTPUT:**\n\n`Lyrics`",
+            caption=f"**ᴏᴜᴛᴘᴜᴛ:**\n\n`Lyrics`",
             quote=False,
         )
         os.remove(filename)
@@ -81,23 +81,23 @@ async def lyricssex(_, CallbackQuery):
 @app.on_message(filters.command("lyrics"))
 async def lrsearch(_, message: Message):
     if len(message.command) < 2:
-        return await message.reply_text("**Usage:**\n\n/lyrics [ Music Name]")
-    m = await message.reply_text("Searching Lyrics")
+        return await message.reply_text("**ᴜsᴀɢᴇ:**\n\n/lyrics [ ᴍᴜsɪᴄ ɴᴀᴍᴇ]")
+    m = await message.reply_text("sᴇᴀʀᴄʜɪɴɢ ʟʏʀɪᴄs...")
     query = message.text.split(None, 1)[1]
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
     y = lyricsgenius.Genius(x)
     y.verbose = False
     S = y.search_song(query, get_full_info=False)
     if S is None:
-        return await m.edit("Lyrics not found :p")
+        return await m.edit("ʟʏʀɪᴄs ɴᴏᴛ ғᴏᴜɴᴅ...")
     xxx = f"""
-**Lyrics Search Powered By {MUSIC_BOT_NAME}**
+**ʟʏʀɪᴄs sᴇᴀʀᴄʜ ᴘᴏᴡᴇʀᴇᴅ ʙʏ {MUSIC_BOT_NAME}**
 
-**Searched Song:-** __{query}__
-**Found Lyrics For:-** __{S.title}__
-**Artist:-** {S.artist}
+**sᴇᴀʀᴄʜᴇᴅ sᴏɴɢ:-** __{query}__
+**ғᴏᴜɴᴅ ʟʏʀɪᴄs ғᴏʀ:-** __{S.title}__
+**ᴀʀᴛɪsᴛ:-** {S.artist}
 
-**__Lyrics:__**
+**__ʟʏʀɪᴄs:__**
 
 {S.lyrics}"""
     if len(xxx) > 4096:
@@ -107,7 +107,7 @@ async def lrsearch(_, message: Message):
             out_file.write(str(xxx.strip()))
         await message.reply_document(
             document=filename,
-            caption=f"**OUTPUT:**\n\n`Lyrics`",
+            caption=f"**ᴏᴜᴛᴘᴜᴛ:**\n\n`Lyrics`",
             quote=False,
         )
         os.remove(filename)
