@@ -24,12 +24,12 @@ def logging(mystic):
             logger_text = f"""
 __**New {what}**__
 
-**Chat:** {message.chat.title} [`{message.chat.id}`]
-**User:** {message.from_user.mention}
-**Username:** @{message.from_user.username}
-**User ID:** `{message.from_user.id}`
-**Chat Link:** {chatusername}
-**Query:** {message.text}"""
+**ᴄʜᴀᴛ:** {message.chat.title} [`{message.chat.id}`]
+**ᴜsᴇʀ:** {message.from_user.mention}
+**ᴜsᴇʀɴᴀᴍᴇ:** @{message.from_user.username}
+**ᴜsᴇʀ ɪᴅ:** `{message.from_user.id}`
+**ᴄʜᴀᴛ ʟɪɴᴋ:** {chatusername}
+**ǫᴜᴇʀʏ:** `{message.text}`"""
             if LOG_CLIENT != "None":
                 await LOG_CLIENT.send_message(
                     LOG_GROUP_ID,
