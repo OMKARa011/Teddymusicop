@@ -236,7 +236,7 @@ home_text_pm = f"""ʜᴇʟʟᴏ ,
 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: / """
 
 
-@app.on_message(filters.command[("help", "start")] & filters.private)
+@app.on_message(filters.command(["help", "start"]) & filters.private)
 async def help_command(_, message):
     text, keyboard = await help_parser(message.from_user.mention)
     await app.send_message(message.chat.id, text, reply_markup=keyboard)
