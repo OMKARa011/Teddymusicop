@@ -24,7 +24,6 @@ from Hero.Utilities.chat import specialfont_to_normal
 from Hero.Utilities.theme import check_theme
 from Hero.Utilities.thumbnails import gen_thumb
 from Hero.Utilities.url import get_url
-from Hero.Utilities.videostream import start_live_stream, start_video_stream
 from Hero.Utilities.youtube import (get_m3u8, get_yt_info_id,
                                      get_yt_info_query,
                                      get_yt_info_query_slider)
