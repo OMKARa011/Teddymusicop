@@ -26,7 +26,6 @@ from Hero.Utilities.stream import start_stream, start_stream_audio
 from Hero.Utilities.theme import check_theme
 from Hero.Utilities.thumbnails import gen_thumb
 from Hero.Utilities.url import get_url
-from Hero.Utilities.videostream import start_stream_video
 from Hero.Utilities.youtube import (get_yt_info_id, get_yt_info_query,
                                      get_yt_info_query_slider)
 
