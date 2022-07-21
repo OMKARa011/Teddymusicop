@@ -11,8 +11,8 @@ def others_markup(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🔎 sᴇᴀʀᴄʜɪɴɢ ʟʏʀɪᴄs",
-                callback_data=f"lyrics {videoid}|{user_id}",
+                text=" Sᴜᴘᴘᴏʀᴛ 🥀 ",
+                url="https://t.me/Teddysupport",
             )
         ],
         [
@@ -33,11 +33,11 @@ def others_markup(videoid, user_id):
         ],
         [
             InlineKeyboardButton(
-                text="⬅️ ɢᴏ ʙᴀᴄᴋ",
+                text="⬅️ Gᴏ ʙᴀᴄᴋ",
                 callback_data=f"pr_go_back_timer {videoid}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="🗑 ᴄʟᴏsᴇ ᴍᴇɴᴜ",
+                text="🗑 Cʟᴏsᴇ ᴍᴇɴᴜ",
                 callback_data=f"close",
             ),
         ],
@@ -49,19 +49,19 @@ def download_markup(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="⬇️ ɢᴇᴛ ᴀᴜᴅɪᴏ",
+                text=" 🎶 Gᴇᴛ ᴀᴜᴅɪᴏ",
                 callback_data=f"gets audio|{videoid}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="⬇️ ɢᴇᴛ ᴠɪᴅᴇᴏ",
+                text=" 📽️ Gᴇᴛ ᴠɪᴅᴇᴏ",
                 callback_data=f"gets video|{videoid}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⬅️ ɢᴏ ʙᴀᴄᴋ", callback_data=f"goback {videoid}|{user_id}"
+                text="⬅️ Gᴏ ʙᴀᴄᴋ", callback_data=f"goback {videoid}|{user_id}"
             ),
-            InlineKeyboardButton(text="🗑 Close Menu", callback_data=f"close"),
+            InlineKeyboardButton(text="🗑 Cʟᴏsᴇ ᴍᴇɴᴜ", callback_data=f"close"),
         ],
     ]
     return buttons
