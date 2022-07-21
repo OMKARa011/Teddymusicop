@@ -1,7 +1,7 @@
 {
-  "name": "ʜᴇʀᴏ ᴍᴜsɪᴄs ʙᴏᴛ",
+  "name": "Tᴇᴅᴅʏ ᴍᴜsɪᴄs ʙᴏᴛ",
   "description": "ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ ʙᴏᴛ ᴡɪᴛʜ ᴘʀᴏᴘᴇʀ ғᴜɴᴄᴛɪᴏɴs ᴡʀɪᴛᴛᴇɴ ɪɴ ᴘʏᴛʜᴏɴ ᴡɪᴛʜ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴘʏ-ᴛɢᴄᴀʟʟs.",
-  "logo": "https://te.legra.ph/file/a1dd253ae11053bfebaa3.png",
+  "logo": "https://telegra.ph/file/7938c5b4c08bf3bd7b31c.jpg",
   "keywords": [
   "python3",
   "telegram"
@@ -35,7 +35,7 @@
     },
     "MUSIC_BOT_NAME": {
       "description": "A name for your Music Bot.",
-      "value": "Hero",
+      "value": "Teddy music",
       "required": true
     },
     "SUPPORT_CHANNEL": {
@@ -105,7 +105,7 @@
     },
     "UPSTREAM_REPO": {
       "description": "If you dont know this, Leave as it is",
-      "value": "https://github.com/SRUJANSBOT/Hero-OP",
+      "value": "https://github.com/Suruxhub/Teddymusicop",
       "required": true
     },
     "UPSTREAM_BRANCH": {
