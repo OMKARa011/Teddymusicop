@@ -22,14 +22,14 @@ def logging(mystic):
                 except:
                     what = "Command"
             logger_text = f"""
-__**New {what}**__
+__**Nᴇᴡ {what}**__
 
-**ᴄʜᴀᴛ:** {message.chat.title} [`{message.chat.id}`]
-**ᴜsᴇʀ:** {message.from_user.mention}
-**ᴜsᴇʀɴᴀᴍᴇ:** @{message.from_user.username}
-**ᴜsᴇʀ ɪᴅ:** `{message.from_user.id}`
-**ᴄʜᴀᴛ ʟɪɴᴋ:** {chatusername}
-**ǫᴜᴇʀʏ:** `{message.text}`"""
+**Cʜᴀᴛ 🗃️:** {message.chat.title} [`{message.chat.id}`]
+**Usᴇʀ 👼:** {message.from_user.mention}
+**Usᴇʀɴᴀᴍᴇ 💥:** @{message.from_user.username}
+**Usᴇʀ ɪᴅ 💫:** `{message.from_user.id}`
+**Cʜᴀᴛ ʟɪɴᴋ 👀:** {chatusername}
+**Qᴜᴇʀʏ ❓:** `{message.text}`"""
             if LOG_CLIENT != "None":
                 await LOG_CLIENT.send_message(
                     LOG_GROUP_ID,
