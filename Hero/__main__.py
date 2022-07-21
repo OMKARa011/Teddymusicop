@@ -115,8 +115,8 @@ async def initiate_bot():
             console.print(f"\n[red]sᴛᴏᴘᴘɪɴɢ ʙᴏᴛ")
             return
         try:
-            await ASS_CLI_1.join_chat("HeroOfficialBots")
-            await ASS_CLI_1.join_chat("Yaaro_ki_yaarii")
+            await ASS_CLI_1.join_chat("Teddy_bot_updstes")
+            await ASS_CLI_1.join_chat("Teddysupport")
         except:
             pass
         console.print(f"├[red] ᴀssɪsᴛᴀɴᴛ 1 sᴛᴀʀᴛᴇᴅ ᴀs {ASSNAME1}")
@@ -134,8 +134,8 @@ async def initiate_bot():
             console.print(f"\n[red]sᴛᴏᴘᴘɪɴɢ ʙᴏᴛ")
             return
         try:
-            await ASS_CLI_2.join_chat("HeroOfficialBots")
-            await ASS_CLI_2.join_chat("yaaro_ki_yaarii")
+            await ASS_CLI_2.join_chat("Teddy_bot_updates")
+            await ASS_CLI_2.join_chat("Teddysupport"")
         except:
             pass
         console.print(f"├[red] ᴀssɪsᴛᴀɴᴛ 2 sᴛᴀʀᴛᴇᴅ ᴀs {ASSNAME2}")
@@ -153,8 +153,8 @@ async def initiate_bot():
             console.print(f"\n[red]sᴛᴏᴘᴘɪɴɢ ʙᴏᴛ")
             return
         try:
-            await ASS_CLI_3.join_chat("HeroOfficialBots")
-            await ASS_CLI_3.join_chat("yaaro_ki_yaarii")
+            await ASS_CLI_3.join_chat("Teddy_bot_updates")
+            await ASS_CLI_3.join_chat("Teddysupport")
         except:
             pass
         console.print(f"├[red] ᴀssɪsᴛᴀɴᴛ 3 sᴛᴀʀᴛᴇᴅ ᴀs {ASSNAME3}")
@@ -172,8 +172,8 @@ async def initiate_bot():
             console.print(f"\n[red]sᴛᴏᴘᴘɪɴɢ ʙᴏᴛ")
             return
         try:
-            await ASS_CLI_4.join_chat("HeroOfficialBots")
-            await ASS_CLI_4.join_chat("yaaro_ki_yaarii")
+            await ASS_CLI_4.join_chat("Teddy_bot_updates")
+            await ASS_CLI_4.join_chat("Teddysupport")
         except:
             pass
         console.print(f"├[red] ᴀssɪsᴛᴀɴᴛ 4 sᴛᴀʀᴛᴇᴅ ᴀs {ASSNAME4}")
@@ -191,8 +191,8 @@ async def initiate_bot():
             console.print(f"\n[red]sᴛᴏᴘᴘɪɴɢ ʙᴏᴛ")
             return
         try:
-            await ASS_CLI_5.join_chat("HeroOfficialBots")
-            await ASS_CLI_5.join_chat("Yaaro_ki_yaarii")
+            await ASS_CLI_5.join_chat("Teddy_bot_uodates")
+            await ASS_CLI_5.join_chat("Teddysupport"")
         except:
             pass
         console.print(f"├[red] ᴀssɪsᴛᴀɴᴛ 5 sᴛᴀʀᴛᴇᴅ ᴀs {ASSNAME5}")
@@ -210,11 +210,11 @@ async def initiate_bot():
             console.print(f"\n[red]sᴛᴏᴘᴘɪɴɢ ʙᴏᴛ")
             return
         try:
-            await LOG_CLIENT.join_chat("modmenumaking")
-            await LOG_CLIENT.join_chat("yaaro_ki_yaarii")
+            await LOG_CLIENT.join_chat("teddy_bot_updates")
+            await LOG_CLIENT.join_chat("Teddysupport")
         except:
             pass
-    console.print(f"└[red] ʜᴇʀᴏ ᴍᴜsɪᴄ ʙᴏᴛ ʙᴏᴏᴛ ᴄᴏᴍᴘʟᴇᴛᴇᴅ...")
+    console.print(f"└[red] Tᴇᴅᴅʏ ᴍᴜsɪᴄ ʙᴏᴛ ʙᴏᴏᴛ ᴄᴏᴍᴘʟᴇᴛᴇᴅ...")
     if STRING1 != "None":
         await pytgcalls1.start()
     if STRING2 != "None":
@@ -231,12 +231,12 @@ async def initiate_bot():
 
 home_text_pm = f"""ʜᴇʟʟᴏ ,
 ᴍʏ ɴᴀᴍᴇ ɪs {BOT_NAME}.
-ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ+ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
+ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
 
 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: / """
 
 
-@app.on_message(filters.command(["help", "start"]) & filters.private)
+@app.on_message(filters.command(["helpp", "startt"]) & filters.private)
 async def help_command(_, message):
     text, keyboard = await help_parser(message.from_user.mention)
     await app.send_message(message.chat.id, text, reply_markup=keyboard)
@@ -390,7 +390,7 @@ async def shikhar(_, CallbackQuery):
     await CallbackQuery.message.edit(text, reply_markup=keyboard)
 
 
-@app.on_callback_query(filters.regex(r"help_(.*?)"))
+@app.on_callback_query(filters.regex(r"helpp_(.*?)"))
 async def help_button(client, query):
     home_match = re.match(r"help_home\((.+?)\)", query.data)
     mod_match = re.match(r"help_module\((.+?)\)", query.data)
