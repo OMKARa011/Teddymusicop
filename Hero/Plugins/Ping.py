@@ -22,10 +22,10 @@ async def bot_sys_stats():
     mem = psutil.virtual_memory().percent
     disk = psutil.disk_usage("/").percent
     stats = f"""
-ᴜᴘᴛɪᴍᴇ: {get_readable_time((bot_uptime))}
-ᴄᴘᴜ: {cpu}%
-ʀᴀᴍ: {mem}%
-ᴅɪsᴋ: {disk}%"""
+Uᴘᴛɪᴍᴇ: {get_readable_time((bot_uptime))}
+Cᴘᴜ: {cpu}%
+Rᴀᴍ: {mem}%
+Dɪsᴋ: {disk}%"""
     return stats
 
 
@@ -34,11 +34,11 @@ async def ping(_, message):
     start = datetime.now()
     response = await message.reply_photo(
         photo="Utils/Telegram.JPEG",
-        caption="🌸 ᴘɪɴɢ...",
+        caption="🌸 Pɪɴɢɪɴɢ ʙᴀʙʏ...",
     )
     uptime = await bot_sys_stats()
     end = datetime.now()
     resp = (end - start).microseconds / 1000
     await response.edit_text(
-        f"**💐 ᴘᴏɴɢ**\n`⚡{resp} ᴍs`\n\n**{MUSIC_BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs:**{uptime}"
+        f"**💐 Pᴏɴɢ**\n`⚡{resp} ᴍs`\n\n**{MUSIC_BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs:**{uptime}"
     )
