@@ -192,7 +192,7 @@ async def initiate_bot():
             return
         try:
             await ASS_CLI_5.join_chat("Teddy_bot_uodates")
-            await ASS_CLI_5.join_chat("Teddysupport"")
+            await ASS_CLI_5.join_chat("Teddysupport")
         except:
             pass
         console.print(f"├[red] ᴀssɪsᴛᴀɴᴛ 5 sᴛᴀʀᴛᴇᴅ ᴀs {ASSNAME5}")
